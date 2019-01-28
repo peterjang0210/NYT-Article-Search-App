@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>NYT Article Search App</title>
+</head>
+
+<body>
+    <header>
+        <h1>New York Times Articles</h1>
+    </header>
+
+    <main>
+        <section class="search">
+            <h2>
+                Search Parameters
+            </h2>
+            <form id="searchParam">
+                <div class="form-group">
+                    <label for="searchTerm">Search Term:</label>
+                    <input type="text" id="searchTerm" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="recordNumber">Number of Articles(1-10):</label>
+                    <input type="number" min="1" max="10" id="recordNumber"
+                    class="form-control" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="Start Year">Start Year (Optional):</label>
+                    <input type="text" id="year1" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="End Year">End Year (Optional):</label>
+                    <input type="text" id="year2" class="form-control">
+                </div>
+
+                <input id="addArticles" type="submit" value="Search" class="btn btn-primary">
+                <button id="clearPage" type="button" class="btn btn-primary">Clear</button>
+            </form>
+        </section>
+
+        <section class="display">
+            <h2>Top Articles</h2>
+            <div class="articles">
+
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
